@@ -10,10 +10,7 @@ const scrapeLogic = async (res) => {
       "--no-zygote",
       "--disable-dev-shm-usage"
     ],
-    executablePath:
-      process.env.NODE_ENV === "production"
-        ? process.env.PUPPETEER_EXECUTABLE_PATH
-        : puppeteer.executablePath(),
+    executablePath:puppeteer.executablePath(),
     headless: "new",
     timeout: 60000
   });
